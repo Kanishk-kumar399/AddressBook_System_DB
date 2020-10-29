@@ -4,7 +4,7 @@ create database addressbook-service;
 use addressbook_service;
 
 #create addressBook table
-craete table addressbook
+create table addressbook
 (
    first_name    varchar(150) not null,
    last_name     varchar(150) not null,
