@@ -26,3 +26,7 @@ craete table addressbook
 #ability to edit contacts using name
 update addressbook
      set city='Jamshedpur' where first_name='Kanishk';
+
+#ability to delete a person using name
+ delete from addressbook where first_name='Kanishk' and last_name='Kumar';
+
