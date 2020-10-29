@@ -22,3 +22,7 @@ craete table addressbook
     (first_name,last_name,address,city,state,zip,phone_number,email_id)
     values('Kanishk','Kumar','Sh-3/40','Varanasi','UP',221003,89385384,'kasn@gmail.com'),
     ('Adarsh','Amasn','sds-34','Giridih','Bihar',4645,767564545,'asas@gmail.com');
+
+#ability to edit contacts using name
+update addressbook
+     set city='Jamshedpur' where first_name='Kanishk';
