@@ -40,3 +40,11 @@ select city,count(*) from addressbook group by city;
 #Getting contacts sorted based on first_name
 select * from addressbook where city='Varanasi' order by first_name;
 
+#ability to alter addressbook for name and type
+alter table addressbook add addressbook_name varchar(30) after email_id;
+alter table addressbook add addressbook_type varchar(30) after addressbook_name;
+ update addressbook set addressbook_name='Friend' where first_name='Kanishk';
+update addressbook set addressbook_type='Friends' where first_name='Kanishk';
+update addressbook set addressbook_type='Family' where first_name='Adarsh';
+update addressbook set addressbook_name='HomeDetails' where first_name='Adarsh';
+
