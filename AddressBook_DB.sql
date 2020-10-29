@@ -30,3 +30,6 @@ update addressbook
 #ability to delete a person using name
  delete from addressbook where first_name='Kanishk' and last_name='Kumar';
 
+#ability to get person froma city or state
+select * from addressbook where city='Varanasi' or state='UP';
+
