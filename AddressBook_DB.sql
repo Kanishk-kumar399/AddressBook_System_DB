@@ -47,3 +47,5 @@ update addressbook set addressbook_type='Friends' where first_name='Kanishk';
 update addressbook set addressbook_type='Family' where first_name='Adarsh';
 update addressbook set addressbook_name='HomeDetails' where first_name='Adarsh';
 
+#ability to count by type
+select addressbook_type, count(*) from addressbook group by addressbook_type;
