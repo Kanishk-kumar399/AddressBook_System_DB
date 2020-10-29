@@ -36,3 +36,7 @@ select * from addressbook where city='Varanasi' or state='UP';
 #ability to count by state and city
 select city,count(*) from addressbook group by city;
  select state,count(*) from addressbook group by state;
+
+#Getting contacts sorted based on first_name
+select * from addressbook where city='Varanasi' order by first_name;
+
