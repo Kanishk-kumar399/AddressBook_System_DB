@@ -49,3 +49,10 @@ update addressbook set addressbook_name='HomeDetails' where first_name='Adarsh';
 
 #ability to count by type
 select addressbook_type, count(*) from addressbook group by addressbook_type;
+
+#ability to add contacts in family and friends
+insert into addressbook
+    (first_name,last_name,address,city,state,zip,phone_number,email_id,addressbook_name,addressbook_type)
+    values
+    ('Suresh','Singh','u-34','Meerut','UP',2423,546575645,'assd@gmsd.com','FriendsForever','Friends'),
+    ('Ramesh','Singhaniya','sfs-34','isadud','MP',2424,787656578,'hgbg@fb.com','OfficePeople','Family');
