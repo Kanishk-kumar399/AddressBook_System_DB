@@ -33,3 +33,6 @@ update addressbook
 #ability to get person froma city or state
 select * from addressbook where city='Varanasi' or state='UP';
 
+#ability to count by state and city
+select city,count(*) from addressbook group by city;
+ select state,count(*) from addressbook group by state;
