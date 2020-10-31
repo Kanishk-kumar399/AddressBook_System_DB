@@ -126,3 +126,15 @@ INSERT INTO link_usertype VALUES
  	(1,12),
  	(2,11),
  	(3,12);
+#UC13
+SELECT  * from  (user_details inner join location on user_details.user_id=location.user_id) 
+where city='Agra' or  state='MP';
+
+SELECT count(user_details.user_id) from (use_details inner join on location user_details.user_id=location.user_id)
+where city='Agra' or state= 'MP';
+
+SELECT * from user_details inner join location on user_details.user_id=location.user_id
+where city='Agra' order by firstname;
+
+SELECT count(user_id) from user_details inner join contact on user_details.user_id=contact.user_id
+where type_of_contact='Family';
