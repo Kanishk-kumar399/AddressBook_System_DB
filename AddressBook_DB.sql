@@ -56,3 +56,72 @@ insert into addressbook
     values
     ('Suresh','Singh','u-34','Meerut','UP',2423,546575645,'assd@gmsd.com','FriendsForever','Friends'),
     ('Ramesh','Singhaniya','sfs-34','isadud','MP',2424,787656578,'hgbg@fb.com','OfficePeople','Family');
+
+#UC12
+CREATE TABLE user_details
+( 
+ user_id int NOT NULL,
+ first_name VARCHAR(100) NOT NULL,
+ last_name VARCHAR(100) NOT NULL,
+ PRIMARY KEY(user_id)
+);
+
+
+CREATE TABLE location 
+(
+ user_id int NOT NULL,
+ address VARCHAR(150) NOT NULL,
+ city VARCHAR(50) NOT NULL,
+ state VARCHAR(50) NOT NULL,
+ zip VARCHAR(10) NOT NULL,
+ PRIMARY KEY(user_id),
+ FOREIGN KEY(user_id) references user_details(user_id)
+); 
+
+CREATE TABLE Contact
+(
+ user_id int,
+ phone 	VARCHAR(20),
+ email 	VARCHAR(50),
+ FOREIGN KEY(user_id) REFERENCES user_details(user_id)
+);
+
+CREATE TABLE contact_type
+(
+ type_id int,
+ type_of_contact VARCHAR(50),
+ PRIMARY KEY(type_id)
+);
+
+CREATE TABLE link_usertype
+(
+ user_id int,
+ type_id int,
+ FOREIGN KEY(user_id) references user_details(user_id),
+ FOREIGN KEY(type_id) references contact_type(type_id)
+);
+
+INSERT INTO user_details VALUES
+	(1, 'Kanishk', 'kumar'),
+	(2, 'Aadarsh', 'singh'),
+	(3, 'Shibac', 'chalas');
+    
+INSERT INTO location VALUES
+ 	(1,'sdfs-45', 'Agra', 'MP', '54556'),
+	(2,'gk-f43', 'Delhi','FD', '232'),
+	(3,'Sh-3/40', 'Varanasi', 'UP', '995');
+    
+INSERT INTO Contact VALUES 
+	(1,'2222222222', 'kanishk@email.com'),
+	(2,'1111111111', 'alaloa@email.com'),
+	(3,'5756565665', 'shibasaie@email.com');
+    
+INSERT INTO contact_type VALUES
+ 	(11,'Friends'),
+ 	(12,'Family');
+    
+INSERT INTO link_usertype VALUES
+ 	(1,11),
+ 	(1,12),
+ 	(2,11),
+ 	(3,12);
